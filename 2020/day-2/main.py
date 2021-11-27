@@ -18,7 +18,7 @@ class Policy:
         ]
 
 
-def has_ok_policy_qtd(db: TextIO, validator: Callable[[Policy], bool]) -> int:
+def ok_policy_qtd(db: TextIO, validator: Callable[[Policy], bool]) -> int:
     good_passwords = 0
 
     for item in db:
