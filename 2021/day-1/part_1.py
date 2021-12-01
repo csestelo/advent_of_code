@@ -1,15 +1,13 @@
 from io import StringIO
+from itertools import tee
 
 
 def larger_measurement_count(measurements: StringIO) -> int:
-    last_measurement = int(next(measurements))
+    first, second = tee(map(int, measurements))
+    next(second)
     increased = 0
 
-    for item in measurements:
-        measurement = int(item)
-        if measurement > last_measurement:
-            increased += 1
-        
-        last_measurement = measurement
+    for previous, current in zip(first, second):
+        increased += current > previous
     
     return increased
