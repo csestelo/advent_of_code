@@ -1,7 +1,7 @@
 import unittest
 from io import StringIO
 
-from part_1 import calculate_position
+from part_1 import power_comsumption
 
 
 class PartOne(unittest.TestCase):
@@ -21,11 +21,11 @@ class PartOne(unittest.TestCase):
             01010
         '''.strip())
 
-        self.assertEqual(198, calculate_position(instructions))
+        self.assertEqual(198, power_comsumption(instructions))
 
     def test_original_input(self):
         with open('2021/day-3/input.txt', encoding='utf-8') as instructions:
-            self.assertEqual(0, calculate_position(instructions))
+            self.assertEqual(3958484, power_comsumption(instructions))
 
     
 
