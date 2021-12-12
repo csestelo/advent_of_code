@@ -30,9 +30,9 @@ class PartOne(unittest.TestCase):
 
         self.assertEqual(4512, calculate_score(bingo_info))
 
-    # def test_original_input(self):
-    #     with open('2021/day-3/input.txt', encoding='utf-8') as bingo_info:
-    #         self.assertEqual(0, calculate_score(bingo_info))
+    def test_original_input(self):
+        with open('2021/day-4/input.txt', encoding='utf-8') as bingo_info:
+            self.assertEqual(58374, calculate_score(bingo_info))
 
     
 
